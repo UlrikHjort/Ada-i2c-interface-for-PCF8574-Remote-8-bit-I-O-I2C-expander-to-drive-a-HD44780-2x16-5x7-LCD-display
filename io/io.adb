@@ -33,9 +33,9 @@ package body IO is
 	Convention    => C,
         External_Name => "open";      
       
-      Handle : constant Interfaces.C.Strings.chars_ptr := New_String (Filename);      
+      F_Name : constant Interfaces.C.Strings.chars_ptr := New_String (Filename);      
    begin
-      return COpen(Handle,Flags);
+      return COpen(F_Name,Flags);
    end Open;
    
    --------------------------------------------------------------------
